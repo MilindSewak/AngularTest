@@ -1,0 +1,46 @@
+<div class="content" role="main">
+
+    <div class="row" >
+      <div class="col-sm-12">
+        
+        <div class="login-card card-body auth-body">
+          <form class="md-float-material" (ngSubmit)="onSubmit()" >
+
+            <div class="auth-box">
+              <div class="row m-b-20">
+                <div class="col-md-12">
+                  <div class="text-center">
+                    <img class="img-logo" src="assets/images/1.jfif" alt="1.jfif">
+                  </div>
+                  <h3 class="txt-primary">SIGNIN</h3>
+                </div>
+              </div>
+              <hr/>
+
+              <div class="input-group">
+                <input type="email"  name="username" placeholder="Username" [(ngModel)]="login.username"
+                  class="form-control" 
+                   required>
+                <span class="md-line"></span>
+              </div><br>
+              <div class="input-group">
+                <input type="password"  name="password" placeholder="Password" [(ngModel)]="login.password" class="form-control" 
+                   required>
+                <span class="md-line"></span>
+              </div><br>
+              <div class="row m-t-30">
+                <div class="col-md-12">
+
+                  <button type="button" type="submit"
+                    class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">SIGNIN</button>
+
+                </div>
+              </div>
+              <hr />
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

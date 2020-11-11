@@ -1,0 +1,18 @@
+
+
+<div class="content" role="main">
+
+    <div class="row" >
+      <div class="col-sm-12">
+        
+        <div class="login-card card-body auth-body">
+            <ul>
+                <li *ngFor="let item of collection | paginate: { itemsPerPage:5, currentPage: p}">
+                {{item}}
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <pagination-controls (pageChange)="p =$event"></pagination-controls>
+</div>
