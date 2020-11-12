@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NgxPaginationModule } from "ngx-pagination";
 import { LoginModule } from './login/login.module';
 import { WelcomeModule } from './welcome/welcome.module';
-
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { WelcomeModule } from './welcome/welcome.module';
     FormsModule,
     NgxPaginationModule,
     LoginModule,
-    WelcomeModule
+    WelcomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

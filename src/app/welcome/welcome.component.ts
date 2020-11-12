@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxPaginationModule } from "ngx-pagination";
-// import { HttpService } from 'src/app/http.service';
+import { HttpService } from 'src/app/http.service';
 
 @Component({
   selector: 'app-welcome',
@@ -11,19 +11,21 @@ export class WelcomeComponent implements OnInit {
 
   collection = []
   p:number = 1;
-  constructor() {
+  constructor(public httpService: HttpService) {
 
-     for(let i=0;i <=20;i++){
-    this.collection.push("Angular "+i+".0");
-   }
-   console.log(this.collection)
+  //    for(let i=0;i <=20;i++){
+  //   this.collection.push("Angular "+i+".0");
+  //  }
+  //  console.log(this.collection)
+  this.ngOnInit()
   }
 
   ngOnInit(): void {
-   
-    // this.httpService.sendGetRequest().subscribe((responseBody) => {
-    //   console.log(responseBody);
-    // });
+    console.log("ngOnInit:-- ")
+    this.httpService.sendGetRequest().subscribe((responseBody) => {
+      this.collection = responseBody;
+      console.log(responseBody);
+    });
 
     }
 

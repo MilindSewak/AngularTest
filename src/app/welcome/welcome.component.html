@@ -1,5 +1,5 @@
 
-
+<p>Welcome Works</p>
 <div class="content" role="main">
 
     <div class="row" >
@@ -8,7 +8,7 @@
         <div class="login-card card-body auth-body">
             <ul>
                 <li *ngFor="let item of collection | paginate: { itemsPerPage:5, currentPage: p}">
-                {{item}}
+               Id: {{item.id}} | User Id: {{item.userId}} | Title: {{item.title}} | | Body: {{item.body}} 
                 </li>
             </ul>
         </div>
